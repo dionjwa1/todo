@@ -39,8 +39,6 @@ function inTransit(payload) {
 }
 
 
-// === === // export // === === //
-module.exports = { inTransit, pickedUp };
 
 module.exports = () => {
   console.log('beginning drive');
