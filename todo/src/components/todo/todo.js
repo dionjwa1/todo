@@ -47,9 +47,7 @@ const ToDo = () => {
     <>
     <Header name={incomplete}/>
     <Form handleChange={handleChange} handleSubmit={handleSubmit}/>
-<List list={list} toggleComplete={toggleComplete}/> 
-    
-
+    <List list={list} toggleComplete={toggleComplete}/> 
     </>
   );
 };

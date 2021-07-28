@@ -6,10 +6,10 @@ function Form(props) {
     return(
     <form onSubmit={props.handleSubmit}>
 
-        <h2>Add To Do Item</h2>
+        <h2 style={{color:'blue'}}>Add To Do Item</h2>
 
         <label>
-            <span>To Do Item</span>
+            <span style={{backgroundColor:'orange'}}>To Do Item</span>
             <input onChange={props.handleChange} name="text" type="text" placeholder="Item Details" />
         </label>
 
@@ -20,12 +20,14 @@ function Form(props) {
 
         <label>
             <span>Difficulty</span>
-            <input onChange={props.handleChange} defaultValue={3} type="range" min={1} max={5} name="difficulty" />
+            <input onChange={props.handleChange} defaultValue={3}  style={{background:'green'}}type="range" min={1} max={5} name="difficulty" />
         </label>
 
         <label>
-            <button type="submit">Add Item</button>
+            <button style={{backgroundColor:'gold'}} type="submit">Add Item</button>
         </label>
+
+        <button style={{backgroundColor:'pink'}}type="submit">Previous</button><button style={{backgroundColor:'green'}} type="submit">Next</button>
     </form>
     );}
 
