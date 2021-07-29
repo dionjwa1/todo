@@ -3,7 +3,7 @@ import React from 'react';
 function Header(props) {
     return (
         <header>
-            <h1>To Do List: {props.name} items pending</h1>
+            <h1>Outsanding Items List: {props.name} items pending</h1>
         </header>
     );
 
