@@ -5,6 +5,7 @@ import Form from './Form.js';
 import List from './List.js';
 import Login from '../Login.js';
 import { v4 as uuid } from 'uuid';
+import axios from 'axios';
 
 const ToDo = () => {
 
@@ -42,6 +43,11 @@ const ToDo = () => {
     setIncomplete(incompleteCount);
     document.title = `To Do List: ${incomplete}`;
   }, [list]);
+
+  useEffect (() => {
+const results = await axios.get('http://localhost:3001/todos');
+console.log(results.data);
+  },[])
 
   return (
     <>
