@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/storefront/header/header'
+import Footer from './components/storefront/footer/footer'
+import Categories from './components/storefront/categories';
+import Products from './components/storefront/products/details';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> This is my app!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+    <Router>
+      
+      <Header />
+        <Link> </Link>
+      <Switch>
+      <Route path='/categories' >
+      <Categories />
+      </Route>
+
+      <Route path='/details'>
+      <Products />
+      </Route>
+
+      <Route path='/'>
+      <h2>This is Home Coming Soon!</h2>
+      </Route>
+
+      </Switch>
+ 
+    </Router>
+      <Footer />
+</>
   );
 }
 
