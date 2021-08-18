@@ -44,7 +44,7 @@ const ToDo = () => {
     document.title = `To Do List: ${incomplete}`;
   }, [list]);
 
-  useEffect (() => {
+  useEffect (async () => {
 const results = await axios.get('http://localhost:3001/todos');
 console.log(results.data);
   },[])
